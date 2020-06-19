@@ -33,6 +33,11 @@ let app = new Vue({
         this.tasksDoneDuration = this.tasks.map(function(t){
           return t.done?0:t.duration;
         }).reduce((a,b)=>parseInt(a)+parseInt(b),0);
+        var unith_width = this.tasksDone/this.tasks.length*100;
+        var perc_width = 100 - this.tasksDoneDuration/this.tasksDuration*100;
+        console.log(unith_width + ' / ' + perc_width);
+        $("#determinate_unit").css('width', unith_width+'%');
+        $("#determinate_perc").css('width', perc_width+'%');
       },
       deep: true
     }
