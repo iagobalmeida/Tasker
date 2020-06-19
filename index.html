@@ -28,7 +28,7 @@
           <label for="duration">Duração (Horas)</label>
         </div>
         <div class="input-field col s6 m1">
-          <button class="btn" v-on:click="addTask"><i class="fa fa-plus"></i></button>
+          <button class="btn right" v-on:click="addTask"><i class="fa fa-plus"></i></button>
         </div>
       </div>
       <div class="row">
@@ -36,11 +36,15 @@
           <p>
             <label>
               <span>{{ tasksDone }} tarefas realizadas, {{ tasks.length }} pendente</span>
-              <span class="right">{{ tasksDuration }} horas realizadas, {{ tasksDoneDuration }} pendente</span>
             </label>
           </p>
           <p>
             <label>
+              <span>{{ tasksDuration }} horas realizadas, {{ tasksDoneDuration }} pendente</span>
+            </label>
+          </p>
+          <p>
+            <label style="width:100%;">
               <span>Nome</span>
               <span class="right">Excluir</span>
             </label>
