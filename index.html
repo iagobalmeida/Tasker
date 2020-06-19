@@ -12,22 +12,22 @@
   </head>
   <body>
     <div class="container" id="app">
-      <div class="row">
+      <div class="row" style="margin-top: 20px;">
         <div class="col s12">
           <h4 class="teal-text"><i class="fa fa-check">&nbsp;</i>Tasker</h4>
-          <p>Um app de manejamento de tarefas muito simples criado para testar meus conhecimentos em <b>Vue</b></p>
+          <p class="hide-on-med-and-down">Um app de manejamento de tarefas muito simples criado para testar meus conhecimentos em <b>Vue</b></p>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s8">
+        <div class="input-field col s12 m8">
           <input v-model="newTaskName" id="name" type="text" class="validate">
           <label for="name">Tarefa</label>
         </div>
-        <div class="input-field col s3">
+        <div class="input-field col s6 m3">
           <input v-model="newTaskDuration" id="duration" type="number" class="validate">
           <label for="duration">Duração (Horas)</label>
         </div>
-        <div class="input-field col s1">
+        <div class="input-field col s6 m1">
           <button class="btn" v-on:click="addTask"><i class="fa fa-plus"></i></button>
         </div>
       </div>
